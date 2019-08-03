@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css"
+import Form from "./components/create.account"
 
 function App() {
   return (
-    <div className="App">    
+    <div className="App">
+      < Form/>
+
     </div>
   );
 }
