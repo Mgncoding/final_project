@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import Button from "./button/button";
 import Navbar from "./navbar/navbar.component";
-
 
 export default class HomePage extends Component {
 
@@ -24,12 +23,11 @@ export default class HomePage extends Component {
     render() {
         return (
             <div>
-                <Navbar/>
+                {/* <Navbar/> */}
                 <div>
                     <h1 className="text-center">Finance Guru</h1>
                     <h3 className="text-center">
                     </h3>
-                    <Card handleBtnClick={this.handleBtnClick} />
                     <h1 className="text-center">
                         Budget problems??
                     </h1>
