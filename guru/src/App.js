@@ -7,24 +7,30 @@ import Signup from './components/signup';
 // import Navbar from "./components/navbar/navbar.component"
 // import { sign } from "crypto";
 // import Navbar from "./components/navbar/navbar.component"
+import Form from "./components/savings";
 class App extends Component {
   render (){ 
-  
   return (
-    <Router>
-      
     <div className="container">
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/signup">Create Account</a></li>
-    </ul>
+    <Form/>
 
-    <h1 className="text-center">Finance Guru</h1>
-    
-    <Route path="/" exact component={HomePage} />
-    <Route path="/signup" component = {Signup} />
     </div>
-    </Router>
+
+
+    // <Router>
+      
+    // <div className="container">
+    // <ul>
+    //   <li><a href="/">Home</a></li>
+    //   <li><a href="/signup">Create Account</a></li>
+    // </ul>
+
+    // <h1 className="text-center">Finance Guru</h1>
+    
+    // <Route path="/" exact component={HomePage} />
+    // <Route path="/signup" component = {Signup} />
+    // </div>
+    // </Router>
   );
 }
 }
