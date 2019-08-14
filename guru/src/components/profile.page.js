@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom"
-import Button from "./button/button";
 // import Navbar from "./navbar/navbar.component";
 import Card from "./card/index";
 
@@ -23,17 +22,19 @@ export default class Profile extends Component {
     }
     render() {
         return (
-         <div>
             <div>
-                <Card/>
+                <div>
+                    <Card />
+                </div>
+                <div>
+                    <button type="submit" onClick={(e) => { e.preventDefault(); this.clicked(); }} className="btn btn-success">
+                        My Budget
+                    </button>
+                </div>
+                <div>
+                    <h1>Chart goes here, my dudes!!</h1>
+                </div>
             </div>
-            <idv>
-                <Button/>
-            </idv>
-            <div>
-                <h1>Chart goes here, my dudes!!</h1>
-            </div>
-        </div>
         )
     };
 };
