@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import './App.css';
@@ -33,6 +34,27 @@ function App() {
     </div>
 
 
+import React from 'react';
+import './App.css';
+// import Form from "./components/create.account";
+// import Account from "./components/account";
+// import HomePage from "./components/home";
+// import Signup from './components/signup';
+// import Navbar from "./components/navbar/navbar.component"
+// import Test from "../src/components/test"
+import FixedExpenses from "../src/components/fixed.expenses"
+
+
+
+function App() {
+  return (
+    <div className="App">
+      <FixedExpenses />
+        {/* <Test /> */}
+      {/* < Form/>
+      < Account/> */}
+      {/* <HomePage/> */}
+
     <Router>
       <div>
         <Route exact path="/" component={HomePage} />
@@ -45,6 +67,12 @@ function App() {
   )
 }
 
+
+
+
+      {/* <Signup/>
+
+      < Form/> */}
 
 
 

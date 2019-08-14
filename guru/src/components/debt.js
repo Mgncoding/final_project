@@ -14,7 +14,7 @@ export default class DebtForm extends Component {
             creditCard: 0,
             creditCardTwo: 0,
             tuition: 0,
-            variableExpense: []
+        
         }
     }
     componentDidMount() {
