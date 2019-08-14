@@ -1,6 +1,10 @@
+
 import React, {Component} from "react";
+
+
+
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// import './App.css';
+
 import HomePage from "./components/home";
 import Signup from './components/signup';
 // import Button from './components/button/button'
@@ -17,6 +21,7 @@ class App extends Component {
     </div>
 
 
+
     // <Router>
       
     // <div className="container">
@@ -24,6 +29,34 @@ class App extends Component {
     //   <li><a href="/">Home</a></li>
     //   <li><a href="/signup">Create Account</a></li>
     // </ul>
+
+import React from 'react';
+import './App.css';
+// import Form from "./components/create.account";
+// import Account from "./components/account";
+// import HomePage from "./components/home";
+// import Signup from './components/signup';
+// import Navbar from "./components/navbar/navbar.component"
+// import Test from "../src/components/test"
+import FixedExpenses from "../src/components/fixed.expenses"
+
+
+
+function App() {
+  return (
+    <div className="App">
+      <FixedExpenses />
+        {/* <Test /> */}
+      {/* < Form/>
+      < Account/> */}
+      {/* <HomePage/> */}
+
+    <Router>
+      <div>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/signUp" component={Signup} />
+        {/* <Route exact path = "/form" component={}/> */}
+
 
     // <h1 className="text-center">Finance Guru</h1>
     
@@ -37,6 +70,12 @@ class App extends Component {
    
 
 
+
+
+
+      {/* <Signup/>
+
+      < Form/> */}
 
 
 
