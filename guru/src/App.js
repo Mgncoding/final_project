@@ -1,4 +1,13 @@
 
+import './App.css';
+import Form from "./components/create.account";
+import Account from "./components/account";
+import HomePage from "./components/home/home.js";
+import Signup from './components/signup';
+import Profile from "./components/profile.page";
+import Navbar from "./components/navbar/navbar.component"
+
+
 import React, {Component} from "react";
 
 
@@ -42,9 +51,19 @@ import FixedExpenses from "../src/components/fixed.expenses"
 
 
 
+
 function App() {
   return (
     <div className="App">
+
+      <Navbar/>
+      {/* < Form/>
+      < Account/> */}
+      <HomePage/>
+      {/* <Signup/>
+      < Form/>
+      <Profile/> */}
+
       <FixedExpenses />
         {/* <Test /> */}
       {/* < Form/>
@@ -56,7 +75,6 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/signUp" component={Signup} />
         {/* <Route exact path = "/form" component={}/> */}
-
 
     // <h1 className="text-center">Finance Guru</h1>
     
