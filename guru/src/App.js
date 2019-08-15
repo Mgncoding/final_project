@@ -20,12 +20,12 @@ import Signup from './components/signup';
 // import Navbar from "./components/navbar/navbar.component"
 // import { sign } from "crypto";
 // import Navbar from "./components/navbar/navbar.component"
-import Form from "./components/savings";
+import Variable from "./components/variable.expenses";
 class App extends Component {
   render (){ 
   return (
     <div className="container">
-    <Form/>
+    <Variable/>
 
     </div>
 
