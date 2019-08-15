@@ -1,11 +1,13 @@
 
-// import './App.css';
-// import Form from "./components/create.account";
-// import Account from "./components/account";
+import HomePage from "./components/home/home.js";
+
+
+import Form from "./components/create.account";
+import Account from "./components/account";
 import HomePage from "./components/home/home.js";
 import Signup from './components/signup';
-// import Profile from "./components/profile.page";
-// import Navbar from "./components/navbar/navbar.component"
+import Profile from "./components/profile.page";
+import Navbar from "./components/navbar/navbar.component"
 
 
 import React from "react";
@@ -14,41 +16,18 @@ import React from "react";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-// import HomePage from "./components/home";
-// import Signup from './components/signup';
-// import Button from './components/button/button'
-// import Navbar from "./components/navbar/navbar.component"
-// import { sign } from "crypto";
-// import Navbar from "./components/navbar/navbar.component"
-// import Variable from "./components/variable.expenses";
-// class App extends Component {
-//   render (){ 
-//   return (
-//     <div className="container">
-//     <Variable/>
+import HomePage from "./components/home";
 
-//     </div>
+import React from "react";
 
 
 
-    // <Router>
-      
-    // <div className="container">
-    // <ul>
-    //   <li><a href="/">Home</a></li>
-    //   <li><a href="/signup">Create Account</a></li>
-    // </ul>
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-// import React from 'react';
-// import './App.css';
-// // import Form from "./components/create.account";
-// // import Account from "./components/account";
-// // import HomePage from "./components/home";
-// // import Signup from './components/signup';
-// // import Navbar from "./components/navbar/navbar.component"
-// // import Test from "../src/components/test"
-// import FixedExpenses from "../src/components/fixed.expenses"
 
+import FixedExpenses from "../src/components/fixed.expenses"
+
+ 
 
 
 
@@ -84,5 +63,9 @@ function App() {
   );
 }
 
-   
+
+
+
+
+
 export default App;
