@@ -4,7 +4,7 @@ import React, { Component } from "react";
 export default class FixedExpenses extends Component {
     constructor(props) {
         super(props)
-
+        
         // this.onChangeRent = this.onChangeRent.bind(this);
         // this.onChangePhone = this.onChangePhone.bind(this);
         // this.onChangeInternet = this.onChangeInternet.bind(this);
@@ -19,9 +19,24 @@ export default class FixedExpenses extends Component {
             internet: 0,
             insurance: 0,
             car:0,
-            // displayTotal: 0
+            displayTotal: 0
         }
     }
+    // Need to make an empty array and push all the states into the the sumfunction and call the 
+    // the function into each input 
+    mySumFunction(myArray) {
+        var total = 
+        myArray = [];
+          myArray.push(this.state.rent, this.state.phone, this.state.internet, this.state.insurance, this.state.car, this.state.displayTotal
+              )
+        for(let i = 0; i < myArray.length; i++) {
+            if(parseInt(myArray[i].value)) 
+            total += parseInt(myArray[i].value)
+
+
+        }
+
+      }
     // componentDidMount(){
     //     this.setState({
 
@@ -31,14 +46,6 @@ export default class FixedExpenses extends Component {
     //     this.setState({
     //         rent: e.target.value
     //     })
-    // Need to make an empty array and push all the states into the the sumfunction and call the 
-    // the function into each input 
-      myArray = [];
-        myArraypush(state.rent, 
-            )
-        mySumFunction(myArray) {
-
-        }
     
     handleInputChange = event => {
         const { name, value } = event.target; 
@@ -94,7 +101,7 @@ export default class FixedExpenses extends Component {
             internet: 0,
             insurance: 0,
             car:0,
-            // displayTotal: 0
+            displayTotal: 0
 
         })
     }
@@ -172,7 +179,7 @@ export default class FixedExpenses extends Component {
                     
                     placeholder="Display of Total Inputs">
                     </input>
-                    <button onClick={this.handleFormSubmit}>Submit</button>
+                    <button onClick={this.mySumFunction()}>Submit</button>
                     
                     
             </div>
