@@ -1,3 +1,4 @@
+
 import React from "react";
 import Form from "./components/create.account";
 import Account from "./components/account";
@@ -9,28 +10,12 @@ import FixedExpense from "./components/fixed.expenses"
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-// import Form from "./components/savings";
 
 function App() {
   return (
     <div className="App">
 
 
-    <Router>
-      <div>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/signUp" component={Signup} />
-        {/* <Route exact path = "/form" component={}/> */}
-
-   <h1 className="text-center">Finance Guru</h1>
-    
-     <Route path="/" exact component={HomePage} />
-     <Route path="/signup" component = {Signup} />
-     </div>
-     </Router>
-     </div>
-  );
-}
 
    
 
@@ -38,5 +23,16 @@ function App() {
 
 
 
+
+  <Router>
+
+     <h1 className="text-center">Finance Guru</h1>
+ 
+    <Route path="/" exact component={HomePage} />
+    <Route path="/signup" component = {Signup} />
+    <Route path="/fixed" component = {FixedExpenses} />
+   
+    </Router>
+    </div>
 
 export default App
