@@ -1,13 +1,28 @@
-import React from "react"
-import {BrowserRouter as Router, Route} from "react-router-dom"
-import HomePage from "./components/home/home"
-import Signup from "./components/signup"
-import FixedExpenses from "./components/fixed.expenses"
- 
+
+import React from "react";
+import Form from "./components/create.account";
+import Account from "./components/account";
+import HomePage from "./components/home/home.js";
+import Signup from './components/signup';
+import Profile from "./components/profile.page";
+import Navbar from "./components/navbar/navbar.component"
+import FixedExpense from "./components/fixed.expenses"
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 
 function App() {
   return (
     <div className="App">
+
+
+
+   
+
+
+
+
+
 
   <Router>
 
@@ -19,7 +34,5 @@ function App() {
    
     </Router>
     </div>
-  );
-}
 
-export default App;
+export default App

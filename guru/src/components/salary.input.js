@@ -4,35 +4,28 @@ export default class SalaryInput extends Component {
     constructor(props) {
         super(props)
 
-        this.onChangeHoursWorked = this.onChangeHoursWorked.bind(this)
-        this.onChangeHourlyPay = this.onChangeHourlyPay.bind(this)
-        this.onSubmit = this.onSubmit.bind(this)
-
         this.state = {
-            hoursWorked: 0,
-            hourlyPay: 0,
+            hoursWorked: "",
+            hourlyPay: "",
 
         }
     }
-    onChangeHoursWorked(e) {
+    handleInputChange = event => {
+        const { name, value } = event.target; 
+
         this.setState({
-            hoursWorked: e.target.value
+            [name]: value
         })
-    }
-    onChangeHourlyPay(e) {
-        this.setState({
-            hourlyPay: e.target.value
-        })
+
     }
 
-    onSubmit(e) {
-        e.preventDefault()
-
-        const expense = {
-            hoursWorked: this.state.hoursWorked,
-            hourlyPay: this.state.hourlyPay
-        }
-        console.log(expense)
+    handleFormSubmit = event => {
+        event.preventDefault()
+        
+        this.setState({
+            hoursWorked: "",
+            hourlyPay: ""
+        })
     }
     render() {
         return (
@@ -40,24 +33,29 @@ export default class SalaryInput extends Component {
                 <h3> Input Your Salary Information</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                        <label>Hours Worked: </label>
-                        <select ref="userInput"
-                            required
-                            className="form-control"
-                            value={this.state.hoursWorked}
-                            onChange={this.onChangeHoursWorked}>
-                        </select>
+                    <label>Hours Worked</label>
+                    <br/>
+                    <input
+                        value={this.state.hoursWorked}
+                        name="hoursWorked"
+                        onChange={this.handleInputChange}
+                        type="number"
+                        placeholder="Hours Worked">
+                    </input>
                     </div> <br />
                     <div className="form-group">
-                        <label>Hourly Pay: </label>
-                        <input type="number"
-                            className="form-control"
-                            value={this.state.hourlyPay}
-                            onChange={this.onChangeHourlyPay}
-                        />
+                    <label>Groceries: </label>
+                    <br/>
+                    <input
+                        value={this.state.hourlyPay}
+                        name="hourlyPay"
+                        onChange={this.handleInputChange}
+                        type="number"
+                        placeholder="Hourly Pay">
+                    </input>
                     </div> <br />
                     <div className="form-group">
-                        <input type="submit" value="Create new Expense" className="btn btn-primary" />
+                        <button onClick={this.handleFormSubmit}>Submit</button>
                     </div>
                 </form>
             </div>

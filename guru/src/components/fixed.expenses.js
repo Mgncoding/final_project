@@ -5,13 +5,34 @@ export default class FixedExpenses extends Component {
     constructor(props) {
         super(props)
 
+
         this.state = {
             rent: 0,
             phone: 0,
             internet: 0,
             insurance: 0,
-            car: 0,
-            // displayTotal: 0
+
+            car:0,
+            displayTotal: 0
+        }
+    }
+    // Need to make an empty array and push all the states into the the sumfunction and call the 
+    // the function into each input 
+    mySumFunction(myArray) {
+        var total = 
+        myArray = [];
+          myArray.push(this.state.rent, this.state.phone, this.state.internet, this.state.insurance, this.state.car, this.state.displayTotal
+              )
+        for(let i = 0; i < myArray.length; i++) {
+            if(parseInt(myArray[i].value)) 
+            total += parseInt(myArray[i].value)
+
+
+        }
+
+      }
+   
+    
         }
     }
 
@@ -25,6 +46,7 @@ export default class FixedExpenses extends Component {
                 total += parseInt(myArray[i].value)
         }
     }
+
 
     handleInputChange = event => {
         const { name, value } = event.target;
@@ -41,8 +63,12 @@ export default class FixedExpenses extends Component {
             phone: 0,
             internet: 0,
             insurance: 0,
-            car: 0,
-            // displayTotal: 0
+
+            car:0,
+            displayTotal: 0
+
+       
+
 
         })
     }
@@ -123,10 +149,10 @@ export default class FixedExpenses extends Component {
                     </input>
                     <button onClick={this.mySumFunction()}>Submit</button>
 
-
-                </div>
-
-
+                    
+                    
+            </div>
+         
             </div>
 
         )
