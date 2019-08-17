@@ -1,0 +1,42 @@
+*::after, *::before {
+    box-sizing: border-box
+}
+
+.title {
+    text-align: center;
+    color: rgba(50, 190, 74, 0.753);
+}
+/* label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+input {
+  display: inline-block;
+  float: left;
+}
+.finalDisplay {
+    display: inline-block;
+    clear: both;
+    margin: 30px;
+}
+.final {
+    margin: 30px;
+    display: inline-block;
+}
+.expenseSubmit {
+    clear: both;
+    margin: 30px;
+   position: 
+} */
+.container {
+    width: 500px;
+    clear: both;
+  }
+  
+  .container input {
+    width: 100%;
+    clear: both;
+  }

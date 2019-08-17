@@ -1,56 +1,82 @@
 import React, { Component } from  "react"; 
+import Button from "./button/button"
 
 export default class DebtForm extends Component {
     constructor(props) {
         super(props)
 
-        this.onChangeCreditCard = this.onChangeCreditCard.bind(this);
-        this.onChangeCreditCardTwo = this.onChangeCreditCardTwo.bind(this);
-        this.onChangeTuition = this.onChangeTuition.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
 
 
         this.state = {
-            creditCard: 0,
-            creditCardTwo: 0,
-            tuition: 0,
+            creditCard: "",
+            creditCardTwo: "",
+            tuition: "",
         
         }
-    }
-    componentDidMount() {
-        this.setState({
-
-        })
-    }
-    onChangeCreditCard(e) {
-        this.setState({
-            creditCard: e.target.value
-        })
-    }
-    onChangeCreditCardTwo(e) {
-        this.setState({
-            creditCardTwo: e.target.value
-        })
-    }
-    onChangeTuition(e) { 
-        this.setState({
-            tuition: e.target.value
-        })
-    }
-    onSubmit(e) {
-        e.preventDefault()
-
-        const miscExpenses = {
-            creditCard: this.state.creditCard,
-            creditCardTwo: this.state.creditCardTwo,
-            tuition: this.state.tuition
+        handleInputChange = event => {
+            const { name, value } = event.target; 
+    
+            this.setState({
+                [name]: value
+            })
+    
         }
-        console.log(miscExpenses)
+        handleFormSubmit = event => {
+            event.preventDefault()
+            
+            this.setState({
+                creditCard: "",
+                creditCardTwo: "",
+                tuition: "",
 
+            })
+        }
     }
+ 
     render() {
         return (
-            <div></div>
+            <div className="container">
+                <h3>Any Debt you may have Place here</h3>
+
+                <form>
+                <div className="form-group">
+                        <label> Credit Card One: </label>
+                            <br/>
+                            <input
+                                value={this.state.creditCard}
+                                name="creditCard"
+                                onChange={this.handleInputChange}
+                                type="number"
+                                placeholder="That first debt starter">
+                            </input>
+                    </div>
+                    <div className="form-group">
+                        <label> Second Credit Card: </label>
+                            <br/>
+                            <input
+                                value={this.state.creditCardTwo}
+                                name="creditCardTwo"
+                                onChange={this.handleInputChange}
+                                type="number"
+                                placeholder="That second debt starter">
+                            </input>
+                    </div>
+                    <div className="form-group">
+                        <label> Tuition: </label>
+                            <br/>
+                            <input
+                                value={this.state.tuition}
+                                name="tuition"
+                                onChange={this.handleInputChange}
+                                type="number"
+                                placeholder="That School debt">
+                            </input>
+                    </div>
+                </form>
+                <div className="container">
+                        <Button />
+                </div>
+            </div>
         )
     }
 
