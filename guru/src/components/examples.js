@@ -19,7 +19,7 @@ export default class ExampleDisplay extends Component {
                     <div className="col-md-4">
                         <Card />
                     </div>
-
+                <p>We can some Picture examples here Or look into making short videos/gif for the examples.</p>
                 </div>
             </div>
 

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Pie } from "react-chartjs-2";
 import { MDBContainer } from "mdbreact";
+import FixedExpenses from "../fixed.expenses"
 
 export default class Test extends Component {
     state = {
@@ -8,7 +9,7 @@ export default class Test extends Component {
           labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
           datasets: [
             {
-              data: [300, 50, 100, 40, 120],
+              data: [40, 50, 100, 40, 120],
               backgroundColor: [
                 "#F7464A",
                 "#46BFBD",

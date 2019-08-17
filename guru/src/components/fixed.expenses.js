@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./style/fixed.expense.form.css"
 // import NumberFormat from 'react-number-format';
 
 export default class FixedExpenses extends Component {
@@ -14,12 +15,12 @@ export default class FixedExpenses extends Component {
         // this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
-            rent: 0,
-            phone: 0,
-            internet: 0,
-            insurance: 0,
-            car:0,
-            displayTotal: 0
+            rent: "",
+            phone: "",
+            internet: "",
+            insurance: "",
+            car:"",
+            displayTotal: ""
         }
     }
     // Need to make an empty array and push all the states into the the sumfunction and call the 
@@ -96,24 +97,24 @@ export default class FixedExpenses extends Component {
         event.preventDefault()
         
         this.setState({
-            rent: 0,
-            phone: 0,
-            internet: 0,
-            insurance: 0,
-            car:0,
-            displayTotal: 0
+            rent: "",
+            phone: "",
+            internet: "",
+            insurance: "",
+            car:"",
+            displayTotal: ""
 
         })
     }
     render() {
         return (
         <div className="container">
-            <h2> Your Fixed Expenses</h2>
+            <h2 className="title"> Your Fixed Expenses</h2>
             
-          <form>
+          <form className="formStyle">
             <div className="form-group">
-                <label>Monthly Rent/Mortgage: </label>
-                <br/>
+                <label className="options">Monthly Rent/Mortgage: </label>
+               
                 <input
                     value={this.state.rent}
                     name="rent"
@@ -123,8 +124,8 @@ export default class FixedExpenses extends Component {
                         </input>
             </div>
             <div className="form-group">
-                <label>Phone Bill: </label>
-                <br/>
+                <label className="options">Phone Bill: </label>
+                
                 <input
                     value={this.state.phone}
                     name="phone"
@@ -135,20 +136,20 @@ export default class FixedExpenses extends Component {
 
             </div>
             {/* <div className="form-group">
-                <label>Car Insurance: </label>
-                <br/>
+                <label className="options">Car Insurance: </label>
+               
                 <input
                     value={this.state.car}
-                    name="car insurance"
+                    name="car"
                     onChange={this.handleInputChange}
                     type="number"
                     placeholder="Car Insurance">
                         </input>
             </div> */}
             <div className="form-group">
-                <label>Cable/Internet: </label>
-                <br/>
-                <input
+                <label className="options">Cable/Internet:        </label>
+                
+                <input className="textEnter"
                     value={this.state.internet}
                     name="internet"
                     onChange={this.handleInputChange}
@@ -157,11 +158,11 @@ export default class FixedExpenses extends Component {
                         </input>
             </div>
             {/* <div className="form-group">
-                <label>Rent/Mortgage Insurance: </label>
-                <br/>
+                <label className="options">Rent/Mortgage Insurance: </label>
+            
                 <input
                     value={this.state.insurance}
-                    name="rent insurance"
+                    name="insurance"
                     onChange={this.handleInputChange}
                     type="number"
                     placeholder="Rent/Mortgage Insurance">
@@ -171,15 +172,15 @@ export default class FixedExpenses extends Component {
           </form>
           <br/><br/>
             <div className="container">
-                <label>Your Total Fixed Expenses</label>
-                <input 
+                <label className="finalDisplay">Your Total Fixed Expenses</label>
+                <input className="final"
                     value={this.state.displayTotal}
                     name="total"
                     onChange={this.handleInputChange}
                     
                     placeholder="Display of Total Inputs">
                     </input>
-                    <button onClick={this.mySumFunction()}>Submit</button>
+                    <button className="expenseSubmit" onClick={this.mySumFunction()}>Submit</button>
                     
                     
             </div>
