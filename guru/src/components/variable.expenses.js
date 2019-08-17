@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 export default class VariableExpenses extends Component {
     constructor(props) {
         super(props)
@@ -128,3 +129,4 @@ export default class VariableExpenses extends Component {
         )
     }
 }
+
