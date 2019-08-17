@@ -23,37 +23,6 @@ render(){
     return(
         <div className="m-cont">
 
-            <div className="app-cont">
-                <h1>Add Two Numbers</h1>
-           
-
-                <div className="data-cont">
-
-                    <div className="indata">
-                        <label>Number 1:</label>
-                        <input type="text" name="perc" id="in1" className="in1" />
-                    </div><br/>
-
-
-                    <div className="indata">
-                        <label>Number 2:</label>
-                        <input type="text" name="perc" id="in2" className="in1" />
-                    </div><br/>
-
-
-                    <input className="button1" type="submit" onClick={() => this.sum()} value="Sum Numbers"></input><br/><br/>
-
-
-                    <div className="indata">
-                        <label>-- Total --</label>
-                        <div id="in3" className="answ1"></div>
-                    </div><br/>
-
-                </div>
-
-
-           
-</div>
         </div>
     )
 }
