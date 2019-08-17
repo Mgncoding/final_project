@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import NumberFormat from 'react-number-format';
 
+//Import math function 
 export default class FixedExpenses extends Component {
     constructor(props) {
         super(props)
