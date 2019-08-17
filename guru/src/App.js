@@ -31,6 +31,8 @@ function App() {
   );
 }
 
+export default App; 
+
 
 
 
@@ -40,16 +42,3 @@ function App() {
 
 
 
-
-  <Router>
-    <FixedExpenses/>
-     <h1 className="text-center">Finance Guru</h1>
- 
-    <Route path="/" exact component={HomePage} />
-    <Route path="/signup" component = {Signup} />
-    <Route path="/fixed" component = {FixedExpenses} />
-   
-    </Router>
-    </div>
-
-export default App
