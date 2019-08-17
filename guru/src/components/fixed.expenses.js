@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import "./style/fixed.expense.form.css"
 // import NumberFormat from 'react-number-format';
 
+
 //Import math function 
 export default class FixedExpenses extends Component {
 
@@ -18,6 +19,7 @@ export default class FixedExpenses extends Component {
     // Need to make an empty array and push all the states into the the sumfunction and call the 
     // the function into each input 
 
+
     
     mySumFunction= () =>  {
         var total = 0
@@ -27,6 +29,7 @@ export default class FixedExpenses extends Component {
         for(let i = 0; i < myArray.length; i++) {
             if(parseInt(myArray[i])) 
             total += parseInt(myArray[i])
+
 
 
         }
@@ -140,6 +143,8 @@ export default class FixedExpenses extends Component {
                 <div className="container">
                 <button onClick={this.mySumFunction}>Submit</button>
                     <label>Your Total Fixed Expenses</label>
+
+
                     <h1>{this.state.displayTotal}</h1>
                     {/* <input
                         //value={this.state.displayTotal}
@@ -149,6 +154,7 @@ export default class FixedExpenses extends Component {
                         placeholder="Display of Total Inputs">
                     </input> */}
                    
+
 
 
                     
