@@ -25,7 +25,7 @@ function App() {
 
 
   <Router>
-
+    <FixedExpenses/>
      <h1 className="text-center">Finance Guru</h1>
  
     <Route path="/" exact component={HomePage} />
