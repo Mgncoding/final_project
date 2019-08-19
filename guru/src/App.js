@@ -1,6 +1,7 @@
 
 import React from "react";
 import Form from "./components/create.account";
+import LoginForm from "./login"
 
 import Account from "./components/account";
 import HomePage from "./components/home/home.js";
@@ -15,9 +16,10 @@ import FixedExpense from "./components/fixed.expenses"
 function App() {
   return (
     <div className="App">
+    <LoginForm/>
 
 
-      <Router>
+       <Router>
       <div>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/signUp" component={Signup} />
@@ -26,7 +28,7 @@ function App() {
          <h1 className="text-center">Finance Guru</h1>
     
      </div> 
-     </Router>   
+     </Router>    
      </div>
   );
 }
