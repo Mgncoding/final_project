@@ -6,7 +6,9 @@
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
     "cors": "^2.8.5",
+    "email-validator": "^2.0.4",
     "express": "^4.17.1",
+    "formik": "^1.5.8",
     "mdbreact": "^4.19.0",
     "mongoose": "^5.6.8",
     "react": "^16.8.6",
@@ -15,7 +17,8 @@
     "react-datepicker": "^2.8.0",
     "react-dom": "^16.8.6",
     "react-number-format": "^4.2.0",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "yup": "^0.27.0"
   },
   "scripts": {
     "start": "react-scripts start",
