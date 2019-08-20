@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom"
 // import Navbar from "./navbar/navbar.component";
 import Card from "./card/index";
+import PieChart from "./charts/pie.chart.component"
 
 export default class Profile extends Component {
 
@@ -31,7 +32,7 @@ export default class Profile extends Component {
 
                 </div>
                 <div>
-                    <h1>Chart goes here, my dudes!!</h1>
+                    <h1><PieChart /> </h1>
                 </div>
             </div>
         )

@@ -3,7 +3,7 @@ import { Pie } from "react-chartjs-2";
 import { MDBContainer } from "mdbreact";
 import FixedExpenses from "../fixed.expenses"
 
-export default class Test extends Component {
+export default class PieChart extends Component {
     state = {
         dataPie: {
           labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],

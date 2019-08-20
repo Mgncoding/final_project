@@ -3,7 +3,8 @@ import SalaryInput from "./salary.input";
 import FixedExpenses from "./fixed.expenses";
 import DebtForm from "./debt";
 import VariableExpense from "./variable.expenses";
-import Savings from "./savings";
+// import Savings from "./savings";
+
 
     export default class DisplayFinal extends Component {
 

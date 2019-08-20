@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import {Link} from "react-router-dom";
 
 export default class SalaryInput extends Component {
         
@@ -65,7 +65,8 @@ export default class SalaryInput extends Component {
                     </div>
                 </form>
                 <div>
-                    <button onClick={}>Fixed Expenses</button>
+                <button type="submit" className="btn btn-success"><Link to="/fixed" className="nav-link">Next Fixed Expenses</Link>  </button>
+                <button type="submit" className="btn btn-success"><Link to="/profile" className="nav-link">Back to Profile</Link>  </button>
                 </div>
             </div>
         )

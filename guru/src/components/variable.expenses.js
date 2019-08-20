@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../components/style/variable.expense.css"
+import {Link} from "react-router-dom"
 
 
 export default class VariableExpenses extends Component {
@@ -123,6 +124,9 @@ export default class VariableExpenses extends Component {
                 <h1>{this.state.display}</h1>
                 
                     
+            </div>
+            <div>
+            <button type="submit" className="btn btn-success"><Link to="/debt" className="nav-link">Back to Debt!</Link>  </button>
             </div>
             </div>
         )

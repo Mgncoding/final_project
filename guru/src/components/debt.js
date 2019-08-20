@@ -1,6 +1,6 @@
 import React, { Component } from  "react"; 
-import axios from "axios";
-
+// import axios from "axios";
+import {Link} from "react-router-dom"
 export default class DebtForm extends Component {
     
 
@@ -26,8 +26,8 @@ export default class DebtForm extends Component {
     
             }
     
-            axios.post("http://localhost:3000", myArray)
-            .then(res => console.log(res.data));
+            // axios.post("http://localhost:3000", myArray)
+            // .then(res => console.log(res.data));
 
             this.setState({displayTotal: total});
     
@@ -98,6 +98,10 @@ export default class DebtForm extends Component {
 
 
                     <h1>{this.state.displayTotal}</h1>
+                </div>
+                <div>
+                <button type="submit" className="btn btn-success"><Link to="/fixed" className="nav-link">Back to Fixed!</Link>  </button>
+                <button type="submit" className="btn btn-success"><Link to="/variable" className="nav-link">Your Variable Expenses!</Link>  </button>
                 </div>
             </div>
         )

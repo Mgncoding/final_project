@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 // import "./style/fixed.expense.form.css"
+import {Link} from "react-router-dom";
 
 
 
@@ -128,7 +129,10 @@ export default class FixedExpenses extends Component {
                         <h1>{this.state.displayTotal}</h1>
                  
                 </div>
-
+            <div>
+            <button type="submit" className="btn btn-success"><Link to="/salary" className="nav-link">Back To Salary!</Link>  </button>
+            <button type="submit" className="btn btn-success"><Link to="/debt" className="nav-link">Input Debt!</Link>  </button>
+            </div>
             </div>
 
         )
