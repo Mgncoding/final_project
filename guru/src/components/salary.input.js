@@ -1,63 +1,72 @@
 import React, { Component } from "react";
 
-export default class SalaryInput extends Component {
-    constructor(props) {
-        super(props)
 
-        this.state = {
-            hoursWorked: "",
-            hourlyPay: "",
+export default class SalaryInput extends Component {
+        
+
+            state = {
+            monthlyPay: "",
+          
+            displayTotal: ""
 
         }
-    }
+    
     handleInputChange = event => {
-        const { name, value } = event.target; 
-
+        const { name, value } = event.target;
         this.setState({
             [name]: value
         })
-
-    }
-
-    handleFormSubmit = event => {
-        event.preventDefault()
         
-        this.setState({
-            hoursWorked: "",
-            hourlyPay: ""
-        })
     }
+    mySumFunction= () => {
+        var total = 0
+        var myArray = [];
+          myArray.push(this.state.monthlyPay
+              )
+        for(let i = 0; i < myArray.length; i++) {
+            if(parseInt(myArray[i])) 
+            total += parseInt(myArray[i])
+        }
+    this.setState({displayTotal: total});
+    
+
+        this.setState({
+            
+            monthlyPay: "",
+            
+
+        })
+    
+    }
+    
     render() {
         return (
             <div className="container">
                 <h3> Input Your Salary Information</h3>
-                <form onSubmit={this.onSubmit}>
+                <form>
                     <div className="form-group">
                     <label>Hours Worked</label>
                     <br/>
                     <input
-                        value={this.state.hoursWorked}
-                        name="hoursWorked"
+                        value={this.state.monthlyPay}
+                        name="monthlyPay"
                         onChange={this.handleInputChange}
                         type="number"
                         placeholder="Hours Worked">
                     </input>
                     </div> <br />
+                    
                     <div className="form-group">
-                    <label>Groceries: </label>
-                    <br/>
-                    <input
-                        value={this.state.hourlyPay}
-                        name="hourlyPay"
-                        onChange={this.handleInputChange}
-                        type="number"
-                        placeholder="Hourly Pay">
-                    </input>
-                    </div> <br />
-                    <div className="form-group">
-                        <button onClick={this.handleFormSubmit}>Submit</button>
+                    <button onClick={this.mySumFunction}>Submit</button>
+                    <label>Your Total Fixed Expenses</label>
+
+
+                    <h1>{this.state.displayTotal}</h1>
                     </div>
                 </form>
+                <div>
+                    <button onClick={}>Fixed Expenses</button>
+                </div>
             </div>
         )
     }
