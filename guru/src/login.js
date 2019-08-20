@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom"
+
 export class LoginForm extends React.Component {
   constructor(props) {
     super(props);
@@ -31,7 +33,8 @@ export class LoginForm extends React.Component {
           value={password}
           onChange={this.handleChange}
         />
-        <button type="submit">Login</button>
+                <button type="submit" className="btn btn-success"><Link to="/profile" className="nav-link">Login</Link>  </button>
+        
       </form>
       </div>
       </div>
