@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import "../../src/signup.css"
-// import "../style/signup.style.css"
+
 
 
 const emailRegex = RegExp(
@@ -93,11 +93,12 @@ class Signup extends Component {
 render() {
     const { formErrors} = this.state;
 return(
-    <div className="wrapper" >
+
+    <div className="wrapper">
         <div className="form-wrapper">
             <h1>Create Account</h1>
-            <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
-            <form className="signupForm" action="/submit" method="post" onSubmit={this.handleSubmit} noValidate>
+            <form action="/submit" method="post" onSubmit={this.handleSubmit} noValidate>
+
                 <div className="firstName">
                 <label htmlFor="firstName"></label>
                 <input 
@@ -115,7 +116,9 @@ return(
                 <label htmlFor="lastName"></label>
                 <input 
                 type="text"
-                className="inputFields"
+
+                className=""
+
                 placeholder="Last Name"
                 type="text"
                 name="lastName"
@@ -128,7 +131,8 @@ return(
                 <label htmlFor="email"></label>
                 <input 
                 type="text"
-                className="inputFields"
+
+                className=""
                 placeholder="Email"
                 type="email"
                 name="email"
@@ -141,8 +145,8 @@ return(
                 <label htmlFor="password"></label>
                 <input 
                 type="text"
-                className="inputFields"
                 placeholder="Password"
+                className=""
                 type="password"
                 name="password"
                 noValidate
@@ -152,7 +156,9 @@ return(
 
                 <div className="createAccount">
 
-                    <button className="join-btn" type="submit">Create Account</button>
+
+                    <button type="submit">Create Account</button>
+
                     <small>Already Have an Account?</small>
                 </div>
             </form>

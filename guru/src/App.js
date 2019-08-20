@@ -2,6 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Form from "./components/create.account";
+import LoginForm from "./login"
 import Account from "./components/account";
 import HomePage from "./components/home/home.js";
 import Signup from './components/signup';
@@ -15,9 +16,12 @@ import SalaryInput from "./components/salary.input"
 function App() {
   return (
     <div className="App">
-   
-<SalaryInput />
+
       <Router>
+
+
+       <Router>
+
       <div>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/signUp" component={Signup} />
@@ -27,7 +31,9 @@ function App() {
            <h1 className="text-center">Finance Guru</h1> 
     
      </div> 
-      </Router>   
+
+     </Router>    
+
      </div>
   );
 }

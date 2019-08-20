@@ -1,41 +1,35 @@
 import React, { Component } from "react";
 // import "./style/fixed.expense.form.css"
-// import NumberFormat from 'react-number-format';
 
 
-//Import math function 
+
 export default class FixedExpenses extends Component {
 
-        state = {
+    state = {
 
-            rent: "",
-            phone: "",
-            internet: "",
-            insurance: "",
-            car:"",
-            displayTotal: ""
+        rent: "",
+        phone: "",
+        internet: "",
+        insurance: "",
+        car: "",
+        displayTotal: ""
 
-        }
-    // Need to make an empty array and push all the states into the the sumfunction and call the 
-    // the function into each input 
+    }
 
 
-    
-    mySumFunction= () =>  {
+    mySumFunction = () => {
         var total = 0
         var myArray = [];
-          myArray.push(this.state.rent, this.state.phone, this.state.internet, this.state.insurance, this.state.car
-              )
-        for(let i = 0; i < myArray.length; i++) {
-            if(parseInt(myArray[i])) 
-            total += parseInt(myArray[i])
-
-
+        myArray.push(this.state.rent, this.state.phone, this.state.internet, this.state.insurance, this.state.car
+        )
+        for (let i = 0; i < myArray.length; i++) {
+            if (parseInt(myArray[i]))
+                total += parseInt(myArray[i])
 
         }
 
 
-        this.setState({displayTotal: total});
+        this.setState({ displayTotal: total });
 
         this.setState({
 
@@ -43,35 +37,22 @@ export default class FixedExpenses extends Component {
             phone: "",
             internet: "",
             insurance: "",
-            car:"",
+            car: "",
             //displayTotal: ""
 
         })
 
-      }
-  //add all user inputs and display # on displayTotal
+    }
+   
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
             [name]: value
         })
-        
+
     }
 
-    // handleFormSubmit = event => {
-    //     event.preventDefault()
 
-    //     this.setState({
-
-    //         rent: "",
-    //         phone: "",
-    //         internet: "",
-    //         insurance: "",
-    //         car:"",
-    //         displayTotal: ""
-
-    //     })
-    // }
 
     render() {
         return (
@@ -141,26 +122,13 @@ export default class FixedExpenses extends Component {
                 </form>
                 <br /><br />
                 <div className="container">
-                <button onClick={this.mySumFunction}>Submit</button>
+                    <button onClick={this.mySumFunction}>Submit</button>
                     <label>Your Total Fixed Expenses</label>
 
+                        <h1>{this.state.displayTotal}</h1>
+                 
+                </div>
 
-                    <h1>{this.state.displayTotal}</h1>
-                    {/* <input
-                        //value={this.state.displayTotal}
-                        name="total"
-                        //onChange={this.handleInputChange}
-
-                        placeholder="Display of Total Inputs">
-                    </input> */}
-                   
-
-
-
-                    
-                    
-            </div>
-         
             </div>
 
         )
