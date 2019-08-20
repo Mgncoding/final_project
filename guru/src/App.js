@@ -3,6 +3,8 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Form from "./components/create.account";
 import LoginForm from "./login"
+import ExampleDisplay from "../src/components/examples"
+import SalaryInput from "./components/salary.input"
 import Account from "./components/account";
 import HomePage from "./components/home/home.js";
 import Signup from './components/signup';
@@ -17,7 +19,9 @@ function App() {
   return (
     <div className="App">
 
+
       <Router>
+
 
 
        <Router>
@@ -25,10 +29,15 @@ function App() {
       <div>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/signUp" component={Signup} />
-         <Route exact path = "/form" component={Form}/> 
+
+        <Route exact path = "/form" component={Form}/> 
+        <Route exact path = "/login" component={LoginForm}/>
+        <Route exact path = "/examples" component={ExampleDisplay}/>
+        <Route exact path = "/profile" component={Profile}/>
+        <Route exact path = "/salary" component={SalaryInput}/>
+
         <Route  path={"fixed"} component={FixedExpense} />
-        <Route path={"salary"} component={SalaryInput} />
-           <h1 className="text-center">Finance Guru</h1> 
+        
     
      </div> 
 

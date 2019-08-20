@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom"
 import Button from "../button/button";
-// import Navbar from "./navbar/navbar.component";
+import Navbar from "../navbar/navbar.component"
 import "../home/style.css";
 
 export default class HomePage extends Component {
@@ -25,7 +25,7 @@ export default class HomePage extends Component {
         return (
             <div className="container">
 
-                {/* <Navbar/> */}
+                <Navbar/>
                 <div className="mainBody">
 
                     <div className="mainContent">

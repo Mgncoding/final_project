@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 // import Navbar from "./navbar/navbar.component";
 import Card from "./card/index";
 
@@ -27,9 +27,8 @@ export default class Profile extends Component {
                     <Card />
                 </div>
                 <div>
-                    <button type="submit" onClick={(e) => { e.preventDefault(); this.clicked(); }} className="btn btn-success">
-                        My Budget
-                    </button>
+                <button type="submit" className="btn btn-success"><Link to="/salary" className="nav-link">Start my Budget Now!</Link>  </button>
+
                 </div>
                 <div>
                     <h1>Chart goes here, my dudes!!</h1>
