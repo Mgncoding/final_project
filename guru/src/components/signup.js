@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import "../../src/signup.css"
 
 
+
 const emailRegex = RegExp(
     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
   );
@@ -92,10 +93,12 @@ class Signup extends Component {
 render() {
     const { formErrors} = this.state;
 return(
+
     <div className="wrapper">
         <div className="form-wrapper">
             <h1>Create Account</h1>
             <form action="/submit" method="post" onSubmit={this.handleSubmit} noValidate>
+
                 <div className="firstName">
                 <label htmlFor="firstName"></label>
                 <input 
@@ -113,7 +116,9 @@ return(
                 <label htmlFor="lastName"></label>
                 <input 
                 type="text"
+
                 className=""
+
                 placeholder="Last Name"
                 type="text"
                 name="lastName"
@@ -126,6 +131,7 @@ return(
                 <label htmlFor="email"></label>
                 <input 
                 type="text"
+
                 className=""
                 placeholder="Email"
                 type="email"
@@ -139,8 +145,8 @@ return(
                 <label htmlFor="password"></label>
                 <input 
                 type="text"
+                placeholder="Password"
                 className=""
-                placeholder="password"
                 type="password"
                 name="password"
                 noValidate
@@ -150,7 +156,9 @@ return(
 
                 <div className="createAccount">
 
+
                     <button type="submit">Create Account</button>
+
                     <small>Already Have an Account?</small>
                 </div>
             </form>

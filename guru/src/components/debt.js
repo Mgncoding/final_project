@@ -1,18 +1,46 @@
 import React, { Component } from  "react"; 
-import Button from "./button/button"
+import axios from "axios";
 
 export default class DebtForm extends Component {
-    constructor(props) {
-        super(props)
+    
 
 
 
-        this.state = {
+        state = {
             creditCard: "",
             creditCardTwo: "",
             tuition: "",
+            displayTotal: ""
         
         }
+
+        mySumFunction= () =>  {
+            var total = 0
+            var myArray = [];
+              myArray.push(this.state.creditCard, this.state.creditCardTwo, this.state.tuition
+                  )
+            for(let i = 0; i < myArray.length; i++) {
+                if(parseInt(myArray[i])) 
+                total += parseInt(myArray[i])
+ 
+    
+            }
+    
+            axios.post("http://localhost:3000", myArray)
+            .then(res => console.log(res.data));
+
+            this.setState({displayTotal: total});
+    
+            this.setState({
+    
+                creditCard: "",
+                creditCardTwo: "",
+                tuition: "",
+                
+    
+            })
+    
+          }
         handleInputChange = event => {
             const { name, value } = event.target; 
     
@@ -21,17 +49,8 @@ export default class DebtForm extends Component {
             })
     
         }
-        handleFormSubmit = event => {
-            event.preventDefault()
-            
-            this.setState({
-                creditCard: "",
-                creditCardTwo: "",
-                tuition: "",
-
-            })
-        }
-    }
+        
+    
  
     render() {
         return (
@@ -74,7 +93,11 @@ export default class DebtForm extends Component {
                     </div>
                 </form>
                 <div className="container">
-                        <Button />
+                <button onClick={this.mySumFunction}>Submit</button>
+                    <label>Your Total Fixed Expenses</label>
+
+
+                    <h1>{this.state.displayTotal}</h1>
                 </div>
             </div>
         )

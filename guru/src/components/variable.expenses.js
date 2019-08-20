@@ -1,31 +1,41 @@
 import React, { Component } from "react";
+import "../components/style/variable.expense.css"
 
 
 export default class VariableExpenses extends Component {
-    constructor(props) {
-        super(props)
+ 
 
-        this.state = {
-            groceries: 0,
-            entertainment: 0,
-            clothing: 0,
-            eatingOut: 0,
-            carRepairs: 0,
-            display:0
+        state = {
+            groceries: "",
+            entertainment: "",
+            clothing: "",
+            eatingOut: "",
+            carRepairs: "",
+            display:""
             
         }
-    }
-    mySumFun(myArray) {
-         total = 
-        myArray = [];
+    
+    mySumFun= () => {
+        var total = 0
+        var myArray = [];
           myArray.push(this.state.groceries, this.state.entertainment, this.state.clothing, this.state.eatingOut, this.state.carRepairs
               )
         for(let i = 0; i < myArray.length; i++) {
-            if(parseInt(myArray[i].value)) 
-            total += parseInt(myArray[i].value)
+            if(parseInt(myArray[i])) 
+            total += parseInt(myArray[i])
 
 
         }
+        this.setState({display: total});
+
+        this.setState({
+            groceries: "",
+            entertainment: "",
+            clothing: "",
+            eatingOut: "",
+            carRepairs: "",
+            
+        })
 
       }
       handleInputChange = event => {
@@ -36,18 +46,7 @@ export default class VariableExpenses extends Component {
         })
 
     }
-    handleFormSubmit = event => {
-        event.preventDefault()
-        
-        this.setState({
-            groceries: "",
-            entertainment: "",
-            clothing: "",
-            eatingOut: "",
-            carRepairs: "",
-            display: ""
-        })
-    }
+    
     render() {
         return (
             <div className="container">
@@ -59,6 +58,7 @@ export default class VariableExpenses extends Component {
                     <label>Groceries: </label>
                     <br/>
                     <input
+                        className="inputs"
                         value={this.state.groceries}
                         name="groceries"
                         onChange={this.handleInputChange}
@@ -70,6 +70,7 @@ export default class VariableExpenses extends Component {
                 <label>Entertainment: </label>
                     <br/>
                     <input
+                        className="inputs"
                         value={this.state.entertainment}
                         name="entertainment"
                         onChange={this.handleInputChange}
@@ -81,6 +82,7 @@ export default class VariableExpenses extends Component {
                 <label>Clothing: </label>
                 <br/>
                     <input
+                        className="inputs"
                         value={this.state.clothing}
                         name="clothing"
                         onChange={this.handleInputChange}
@@ -92,6 +94,7 @@ export default class VariableExpenses extends Component {
                 <label>Eat Out: </label>
                 <br/>
                     <input
+                        className="inputs"
                         value={this.state.eatingOut}
                         name="eatingOut"
                         onChange={this.handleInputChange}
@@ -103,6 +106,7 @@ export default class VariableExpenses extends Component {
                 <label>Car Repairs: </label>
                 <br/>
                     <input
+                        className="inputs"
                         value={this.state.carRepairs}
                         name="carRepairs"
                         onChange={this.handleInputChange}
@@ -113,16 +117,11 @@ export default class VariableExpenses extends Component {
                 </form>
                 <br/>
                 <div className="container">
+                <button onClick={this.mySumFun}>Submit</button>
                 <label>Your Total Fixed Expenses</label>
-                <input 
-                     value={this.state.display}
-                     name="display"
-                     onChange={this.handleInputChange}
-                        
-                     placeholder="Display of Total Inputs">
-                </input>
-                    <button onClick={this.mySumFun()}>Submit</button>
-                    
+
+                <h1>{this.state.display}</h1>
+                
                     
             </div>
             </div>
