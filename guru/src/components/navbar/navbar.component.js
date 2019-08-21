@@ -48,7 +48,7 @@ export default class Navbar extends Component {
                 <div className="nav-container">
                     <Navbar>
                         <NavLink
-                            link={designatedUrl}
+                            link={"/profile"}
                         >
                             Link 1
                         </NavLink>
