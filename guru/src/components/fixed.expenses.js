@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import "./style/fixed.expense.form.css"
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -44,7 +44,7 @@ export default class FixedExpenses extends Component {
         })
 
     }
-   
+
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
@@ -58,81 +58,83 @@ export default class FixedExpenses extends Component {
     render() {
         return (
 
-            <div className="container">
-                <h2> Your Fixed Expenses</h2>
+            <div className="wrapper">
+                <div className="form-wrapper">
+                    <h1> Your Fixed Expenses</h1>
 
-                <form>
-                    <div className="form-group">
-                        <label>Monthly Rent/Mortgage: </label>
-                        <br />
-                        <input
-                            value={this.state.rent}
-                            name="rent"
-                            onChange={this.handleInputChange}
-                            type="number"
-                            placeholder="Monthly Rent/Mortgage">
-                        </input>
-                    </div>
-                    <div className="form-group">
-                        <label>Phone Bill: </label>
-                        <br />
-                        <input
-                            value={this.state.phone}
-                            name="phone"
-                            onChange={this.handleInputChange}
-                            type="number"
-                            placeholder="Phone Bill">
-                        </input>
+                    <form>
+                        <div className="form-group">
+                            <label>Monthly Rent/Mortgage: </label>
+                            <br />
+                            <input
+                                value={this.state.rent}
+                                name="rent"
+                                onChange={this.handleInputChange}
+                                type="number"
+                                placeholder="Monthly Rent/Mortgage">
+                            </input>
+                        </div>
+                        <div className="form-group">
+                            <label>Phone Bill: </label>
+                            <br />
+                            <input
+                                value={this.state.phone}
+                                name="phone"
+                                onChange={this.handleInputChange}
+                                type="number"
+                                placeholder="Phone Bill">
+                            </input>
 
-                    </div>
-                    <div className="form-group">
-                        <label>Car Insurance: </label>
-                        <br />
-                        <input
-                            value={this.state.car}
-                            name="car"
-                            onChange={this.handleInputChange}
-                            type="number"
-                            placeholder="CarInsurance">
-                        </input>
+                        </div>
+                        <div className="form-group">
+                            <label>Car Insurance: </label>
+                            <br />
+                            <input
+                                value={this.state.car}
+                                name="car"
+                                onChange={this.handleInputChange}
+                                type="number"
+                                placeholder="CarInsurance">
+                            </input>
 
-                    </div>
-                    <div className="form-group">
-                        <label>Cable/Internet: </label>
-                        <br />
-                        <input
-                            value={this.state.internet}
-                            name="internet"
-                            onChange={this.handleInputChange}
-                            type="number"
-                            placeholder="Cable/Internet">
-                        </input>
-                    </div>
-                    <div className="form-group">
-                        <label>Rent Insurance: </label>
-                        <br />
-                        <input
-                            value={this.state.insurance}
-                            name="insurance"
-                            onChange={this.handleInputChange}
-                            type="number"
-                            placeholder="Rent Insurance">
-                        </input>
-                    </div>
+                        </div>
+                        <div className="form-group">
+                            <label>Cable/Internet: </label>
+                            <br />
+                            <input
+                                value={this.state.internet}
+                                name="internet"
+                                onChange={this.handleInputChange}
+                                type="number"
+                                placeholder="Cable/Internet">
+                            </input>
+                        </div>
+                        <div className="form-group">
+                            <label>Rent Insurance: </label>
+                            <br />
+                            <input
+                                value={this.state.insurance}
+                                name="insurance"
+                                onChange={this.handleInputChange}
+                                type="number"
+                                placeholder="Rent Insurance">
+                            </input>
+                        </div>
 
-                </form>
-                <br /><br />
-                <div className="container">
-                    <button onClick={this.mySumFunction}>Submit</button>
-                    <label>Your Total Fixed Expenses</label>
+                    </form>
+                    <br /><br />
+                    <div className="container">
+                        <button onClick={this.mySumFunction}>Submit</button>
+                        <label>Your Total Fixed Expenses</label>
 
                         <h1>{this.state.displayTotal}</h1>
-                 
+
+                    </div>
+                    <div>
+                        <button type="submit" className="btn btn-success"><Link to="/salary" className="">Back To Salary!</Link>  </button>
+                        <button type="submit" className="btn btn-success"><Link to="/debt" className="">Input Debt!</Link>  </button>
+                    </div>
                 </div>
-            <div>
-            <button type="submit" className="btn btn-success"><Link to="/salary" className="nav-link">Back To Salary!</Link>  </button>
-            <button type="submit" className="btn btn-success"><Link to="/debt" className="nav-link">Input Debt!</Link>  </button>
-            </div>
             </div>
 
         )

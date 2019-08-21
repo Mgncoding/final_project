@@ -18,36 +18,37 @@ export default class Savings extends Component {
 
         }
         handleInputChange = event => {
-            const { name, value } = event.target; 
-    
+            const { name, value } = event.target;
+
             this.setState({
                 [name]: value
             })
-    
+
         }
         handleFormSubmit = event => {
             event.preventDefault()
-            
+
             this.setState({
                 emergency: "",
                 vacation: "",
                 automobile: "",
                 christmas: ""
 
-    
+
             })
         }
     }
     render() {
         return (
-            <div className="container">
-                <h3>A Plan for the Future</h3>
+            <div className="wrapper">
+                <div className="form-wrapper">
+                    <h1>A Plan for the Future</h1>
 
-                
+
                     <form>
-                    <div className="form-group">
-                        <label> Emergency: </label>
-                            <br/>
+                        <div className="form-group">
+                            <label> Emergency: </label>
+                            <br />
                             <input
                                 value={this.state.emergency}
                                 name="emergency"
@@ -55,10 +56,10 @@ export default class Savings extends Component {
                                 type="number"
                                 placeholder="Emergency Fund">
                             </input>
-                    </div>
-                    <div className="form-group">
-                        <label> Vacation: </label>
-                            <br/>
+                        </div>
+                        <div className="form-group">
+                            <label> Vacation: </label>
+                            <br />
                             <input
                                 value={this.state.vacation}
                                 name="vacation"
@@ -66,10 +67,10 @@ export default class Savings extends Component {
                                 type="number"
                                 placeholder="Emergency Fund">
                             </input>
-                    </div>
-                    <div className="form-group">
-                        <label> Automobile: </label>
-                            <br/>
+                        </div>
+                        <div className="form-group">
+                            <label> Automobile: </label>
+                            <br />
                             <input
                                 value={this.state.automobile}
                                 name="automobile"
@@ -77,10 +78,10 @@ export default class Savings extends Component {
                                 type="number"
                                 placeholder="A New Car? Maybe repair on current car">
                             </input>
-                    </div>
-                    <div className="form-group">
-                        <label> Christmas </label>
-                            <br/>
+                        </div>
+                        <div className="form-group">
+                            <label> Christmas </label>
+                            <br />
                             <input
                                 value={this.state.christmas}
                                 name="christmas"
@@ -88,13 +89,13 @@ export default class Savings extends Component {
                                 type="number"
                                 placeholder="That Sweet Holiday fund">
                             </input>
-                    </div>
+                        </div>
                     </form>
                     <div className="container">
-                        <Button />
-                    </div>
+                        <button type="submit" className="btn btn-success"><Link to="/profile" className="">Back To Salary!</Link>  </button>
 
-               
+                    </div>
+                </div>
             </div>
         )
     }
