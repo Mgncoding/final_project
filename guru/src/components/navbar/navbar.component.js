@@ -43,7 +43,7 @@ export default class Navbar extends Component {
         return (
             <div className="welcome-container">
                 <h1 className="title is-1">
-                    {  message}
+                    <img src={require("../navbar/logo.png")}></img>
                 </h1>
                 <div className="nav-container">
                     <Navbar>
