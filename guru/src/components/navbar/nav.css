@@ -15,10 +15,10 @@ nav {
         
         /* flex-grow: 1;
         text-align: center; */
-        color: white;
+        /* color: white;
         background-color: red;
         padding: 5px 10px ;
-        transition: background-color .5s
+        transition: background-color .5s */
     }  
 
     NavLink{

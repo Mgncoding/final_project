@@ -1,7 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+
 .mainBody{
-    background-color: rgb(216, 221, 216);
+    background-color: #f0f0f0;
     padding:100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 Button{
     margin-left: 48%;
+}
+
+.homebody{
+
+    
+    font-size: 25px;
+    color: #167394;
+    font-family: 'Playfair Display', serif;
+
+}
+
+.boldguru{
+    color: #167394;
+  text-shadow: 2px 2px 4px #000000;
 }
