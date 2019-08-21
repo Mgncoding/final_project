@@ -1,0 +1,28 @@
+/* $primary: #267d92; */
+.nav-container {
+     /* width: 50%; */
+}
+nav {
+    float: right;
+    /* display: flex;
+    justify-content: space-around;
+    flex-direction: column; */
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px #808080;
+}
+    a {
+        
+        /* flex-grow: 1;
+        text-align: center; */
+        color: white;
+        background-color: red;
+        padding: 5px 10px ;
+        transition: background-color .5s
+    }  
+
+    NavLink{
+       color: blue;
+    }
+        
+    

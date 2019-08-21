@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "../../src/signup.css"
+import "./signup.css"
 
 
 
