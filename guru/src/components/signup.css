@@ -6,6 +6,11 @@
     justify-content: center;
     align-items: center;
     background-color: #084C61;
+   margin-top: 20px;
+   /* margin-left: 20px; */
+   margin-right: 20px;
+   /* margin-left: 20px; */
+   border-radius: 20px;
 
 }
 
@@ -96,6 +101,7 @@ input.error {
     color: #fff;
     border: 2px solid #fff;
     width: 100%;
+    margin: auto;
     margin-top: 1em;
     padding: 8px 0px;
     font-size: 1em;
