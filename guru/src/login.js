@@ -15,19 +15,21 @@ export class LoginForm extends React.Component {
   render() {
     const { email, password } = this.state;
     return (
+        <div className="container">
         <div className="wrapper">
         <div className="form-wrapper">
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="email">Email</label>
-        <input
+        <label className = "emailtext" htmlFor="email">Email</label>
+        <input className="email"
           name="email"
           type="text"
           placeholder="Enter your email"
           value={email}
           onChange={this.handleChange}
         />
-        <label htmlFor="email">Password</label>
+        <label htmlFor="email" className="passwordtext">Password</label>
         <input
+        className="password"
           name="password"
           type="password"
           placeholder="Enter your password"
@@ -37,6 +39,7 @@ export class LoginForm extends React.Component {
                 <button type="submit" className="btn btn-success"><Link to="/profile" className="nav-link">Login</Link>  </button>
         
       </form>
+      </div>
       </div>
       </div>
     );
