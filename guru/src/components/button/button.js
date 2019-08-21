@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom"
+import "../button/button.css"
 
 export default class Button extends Component {
     // constructor(props) {
@@ -10,11 +11,9 @@ export default class Button extends Component {
     render() {
         return (
             <div>
-                <button type="submit" className="btn btn-success"><Link to="/login" className="nav-link">Start Now!</Link>  </button>
+                <button type="submit" className="submitButton"><Link to="/login" className="startbutton">Start Now!</Link>  </button>
                     
-               
-
-                
+                   
             </div>
         )
     };
