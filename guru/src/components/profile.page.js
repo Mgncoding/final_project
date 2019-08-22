@@ -31,6 +31,7 @@ export default class Profile extends Component {
                     <Card />
                 </div>
                 <div className="profileButton">
+                    <button type="submit" className="ProfileBtn"><Link to="/salary" className="nav-link"> My Budget !</Link>  </button>
                 </div>
                 <div className="chartInfo">
                     <h1><PieChart /> </h1>
