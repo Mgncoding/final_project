@@ -32,7 +32,7 @@ export default class HomePage extends Component {
                                               
                         <p className="homebody">
                             Budget Problems? Money seems to just disappear? Now you don't have to worry! Just consult the <b className="boldguru">Finance Guru! </b> 
-                            Withing a few minutes, you can have a clear understanding of how much money you have left over after your montly expenses.
+                            Withing a few minutes, you can have a clear understanding of how much money you have left over, after your montly expenses.
                             You are only a few clicks away. Start today!
                         </p>
                         <Button />

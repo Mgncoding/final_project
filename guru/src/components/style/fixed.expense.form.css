@@ -1,42 +1,61 @@
-*::after, *::before {
-    box-sizing: border-box
+.fixedtitle{
+    font-size: 25px;
+    color: #167394;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 4px grey
+
+
 }
 
-.title {
-    text-align: center;
-    color: rgba(50, 190, 74, 0.753);
+.mortgage{
+    font-size: 18px;
+    color: #167394;
+    font-family: 'Playfair Display', serif;
+
 }
-/* label{
+
+.mtginput{
+    flex: left;
+}
+
+.phoneinput{
+    flex: left;
+}
+
+.phone{
+    font-size: 18px;
+    color: #167394;
+    font-family: 'Playfair Display', serif;
+}
+.car{
+    font-size: 18px;
+    color: #167394;
+    font-family: 'Playfair Display', serif;
+}
+.carinput{
+    flex: left;
+}
+
+.cable{
+    font-size: 18px;
+    color: #167394;
+    font-family: 'Playfair Display', serif;
+}
+
+.rentinsurance{
+    font-size: 18px;
+    color: #167394;
+    font-family: 'Playfair Display', serif;
+}
+
+.totalfixed{
+    font-size: 18px;
+    color: #167394;
+    font-family: 'Playfair Display', serif;
+
+}
+
+.phoneclass{
     display: inline-block;
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
+    width:100px;
 }
-input {
-  display: inline-block;
-  float: left;
-}
-.finalDisplay {
-    display: inline-block;
-    clear: both;
-    margin: 30px;
-}
-.final {
-    margin: 30px;
-    display: inline-block;
-}
-.expenseSubmit {
-    clear: both;
-    margin: 30px;
-   position: 
-} */
-.container {
-    width: 500px;
-    clear: both;
-  }
-  
-  .container input {
-    width: 100%;
-    clear: both;
-  }
