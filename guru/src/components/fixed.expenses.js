@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import "./style/fixed.expense.form.css"
+import "./style/fixed.expense.form.css"
 import { Link } from "react-router-dom";
 
 
@@ -60,13 +60,14 @@ export default class FixedExpenses extends Component {
 
             <div className="wrapper">
                 <div className="form-wrapper">
-                    <h1> Your Fixed Expenses</h1>
+                    <h1 className="fixedtitle"> Your Fixed Expenses</h1>
 
-                    <form>
-                        <div className="form-group">
-                            <label>Monthly Rent/Mortgage: </label>
+                    <form className="fixedform">
+                        <div className="mtginput">
+                            <label className="mortgage">Monthly Rent/Mortgage: </label>
                             <br />
                             <input
+                            className="rentclass"
                                 value={this.state.rent}
                                 name="rent"
                                 onChange={this.handleInputChange}
@@ -74,10 +75,11 @@ export default class FixedExpenses extends Component {
                                 placeholder="Monthly Rent/Mortgage">
                             </input>
                         </div>
-                        <div className="form-group">
-                            <label>Phone Bill: </label>
+                        <div className="phoneinput">
+                            <label className="phone">Phone Bill: </label>
                             <br />
                             <input
+                            className="phoneclass"
                                 value={this.state.phone}
                                 name="phone"
                                 onChange={this.handleInputChange}
@@ -86,8 +88,8 @@ export default class FixedExpenses extends Component {
                             </input>
 
                         </div>
-                        <div className="form-group">
-                            <label>Car Insurance: </label>
+                        <div className="carinput">
+                            <label className="car"> Car Insurance: </label>
                             <br />
                             <input
                                 value={this.state.car}
@@ -98,8 +100,8 @@ export default class FixedExpenses extends Component {
                             </input>
 
                         </div>
-                        <div className="form-group">
-                            <label>Cable/Internet: </label>
+                        <div className="cableinput">
+                            <label className="cable">Cable/Internet: </label>
                             <br />
                             <input
                                 value={this.state.internet}
@@ -110,7 +112,7 @@ export default class FixedExpenses extends Component {
                             </input>
                         </div>
                         <div className="form-group">
-                            <label>Rent Insurance: </label>
+                            <label className="rentinsurance">Rent Insurance: </label>
                             <br />
                             <input
                                 value={this.state.insurance}
@@ -125,7 +127,7 @@ export default class FixedExpenses extends Component {
                     <br /><br />
                     <div className="container">
                         <button onClick={this.mySumFunction}>Submit</button>
-                        <label>Your Total Fixed Expenses</label>
+                        <label className="totalfixed">Your Total Fixed Expenses</label>
 
                         <h1>{this.state.displayTotal}</h1>
 
