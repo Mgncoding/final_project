@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Form from "./components/create.account";
 import LoginForm from "./login"
-import ExampleDisplay from "../src/components/examples"
+// import ExampleDisplay from "../src/components/examples"
 import HomePage from "./components/home/home.js";
 import Signup from './components/signup';
 import Profile from "./components/profile.page";
@@ -26,7 +26,7 @@ function App() {
          <Route exact path="/" component={HomePage} /> 
         <Route exact path = "/form" component={Form}/> 
         <Route exact path = "/login" component={LoginForm}/>
-        <Route exact path = "/examples" component={ExampleDisplay}/>
+        {/* <Route exact path = "/examples" component={ExampleDisplay}/> */}
         <Route exact path = "/profile" component={Profile}/>
         <Route exact path = "/salary" component={SalaryInput}/>
         <Route exact path="/fixed" component={FixedExpense} />
