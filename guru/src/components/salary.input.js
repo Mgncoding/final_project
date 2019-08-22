@@ -42,12 +42,13 @@ export default class SalaryInput extends Component {
     render() {
         return (
             <div className="container">
-                <h3> Input Your Salary Information</h3>
-                <form>
-                    <div className="form-group">
-                    <label>Hours Worked</label>
+                <h1 className="fixedtitle"> Input Your Salary Information</h1>
+                <form className="fixedform">
+                    <div className="mtginput">
+                    <label className="mortgage">Hours Worked</label>
                     <br/>
                     <input
+                        className="rentclass"
                         value={this.state.monthlyPay}
                         name="monthlyPay"
                         onChange={this.handleInputChange}
@@ -56,18 +57,23 @@ export default class SalaryInput extends Component {
                     </input>
                     </div> <br />
                     
-                    <div className="form-group">
-                    <button onClick={this.mySumFunction}>Submit</button>
-                    <label>Your Total Fixed Expenses</label>
-
-
-                    <h1>{this.state.displayTotal}</h1>
-                    </div>
+                   
                 </form>
-                <div>
-                <button type="submit" className="btn btn-success"><Link to="/fixed" className="nav-link">Next Fixed Expenses</Link>  </button>
-                <button type="submit" className="btn btn-success"><Link to="/profile" className="nav-link">Back to Profile</Link>  </button>
-                </div>
+                <div className="totaldisplay">
+                        <label className="">Monthly Salary</label>
+                        <input classname="totalinput"
+                            value={this.state.displayTotal}
+                            placeholder="Total display">
+                                
+                            </input>
+                        <button onClick={this.mySumFunction} className="firstbutton">Submit</button>
+                    
+                            </div>
+                
+                <div className="changepage">
+                        <button type="submit" className="backbutton"><Link to="/fixed" className="linkcolor">Fixed Expense</Link>  </button>
+                        <button type="submit" className="forwardbutton"><Link to="/profile" className="linkcolor2">Back To Profile</Link>  </button>
+                    </div>
             </div>
         )
     }

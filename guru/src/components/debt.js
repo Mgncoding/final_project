@@ -55,13 +55,14 @@ export default class DebtForm extends Component {
     render() {
         return (
             <div className="container">
-                <h3>Any Debt you may have Place here</h3>
+                <h1 className="fixedtitle">Any Debt you may have Place here</h1>
 
-                <form>
-                <div className="form-group">
-                        <label> Credit Card One: </label>
+                <form className="fixedform">
+                <div className="mtginput">
+                        <label className="mortgage"> Credit Card One: </label>
                             <br/>
                             <input
+                            className="rentclass"
                                 value={this.state.creditCard}
                                 name="creditCard"
                                 onChange={this.handleInputChange}
@@ -69,10 +70,11 @@ export default class DebtForm extends Component {
                                 placeholder="That first debt starter">
                             </input>
                     </div>
-                    <div className="form-group">
-                        <label> Second Credit Card: </label>
+                    <div className="phoneinput">
+                        <label className="phone"> Second Credit Card: </label>
                             <br/>
                             <input
+                                className="phoneclass"
                                 value={this.state.creditCardTwo}
                                 name="creditCardTwo"
                                 onChange={this.handleInputChange}
@@ -80,8 +82,8 @@ export default class DebtForm extends Component {
                                 placeholder="That second debt starter">
                             </input>
                     </div>
-                    <div className="form-group">
-                        <label> Tuition: </label>
+                    <div className="carinput">
+                        <label className="car"> Tuition: </label>
                             <br/>
                             <input
                                 value={this.state.tuition}
@@ -92,18 +94,22 @@ export default class DebtForm extends Component {
                             </input>
                     </div>
                 </form>
-                <div className="container">
-                <button onClick={this.mySumFunction}>Submit</button>
-                    <label>Your Total Fixed Expenses</label>
-
-
-                    <h1>{this.state.displayTotal}</h1>
+                
+                    <div className="totaldisplay">
+                        <label className="">Your Debt </label>
+                        <input classname="totalinput"
+                            value={this.state.displayTotal}
+                            placeholder="Total display">
+                                
+                            </input>
+                        <button onClick={this.mySumFunction} className="firstbutton">Submit</button>
                 </div>
-                <div>
-                <button type="submit" className="btn btn-success"><Link to="/fixed" className="nav-link">Back to Fixed!</Link>  </button>
-                <button type="submit" className="btn btn-success"><Link to="/variable" className="nav-link">Your Variable Expenses!</Link>  </button>
+                <div className="changepage">
+                        <button type="submit" className="backbutton"><Link to="/fixed" className="linkcolor">Back To Fixed!</Link>  </button>
+                        <button type="submit" className="forwardbutton"><Link to="/variable" className="linkcolor2">Your Variable Expenses!</Link>  </button>
+                    </div>
                 </div>
-            </div>
+           
         )
     }
 
