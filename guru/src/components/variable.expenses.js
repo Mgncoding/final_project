@@ -129,7 +129,10 @@ export default class VariableExpenses extends Component {
                     
                             </div>
                     <div>
-                        <button type="submit" className="backbutton"><Link to="/debt" className="nav-link">Back to Debt!</Link>  </button>
+                        <button type="submit" className="backbutton"><Link to="/debt" className="linkcolor">Back to Debt!</Link>  </button>
+                        <button type="submit" className="forwardbutton"><Link to="/profile" className="linkcolor2">Profile!</Link>  </button>
+
+
                     </div>
                 {/* </div> */}
             </div>
