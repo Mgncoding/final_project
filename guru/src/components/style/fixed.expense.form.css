@@ -7,19 +7,19 @@
 
 }
 .container {
-    height: 100v;
+    height: 700px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #084C61;
-   margin-top: 20px;
+   margin-top: 0px;
    /* margin-left: 20px; */
    margin-right: 20px;
    /* margin-left: 20px; */
    border-radius: 20px;
-clear: both;
+/* clear: both; */
 }
 .mtginput {
     width: 100%;
@@ -100,9 +100,74 @@ clear: both;
 
 }
 
-.phoneclass{
+.fixedform {
+    /* text-align: center; */
+}
+.totaldisplay {
+    font-size: 18px;
+    color: #167394;
+    font-family: 'Playfair Display', serif;
+    position: fixed;
+    /* clear: both;s */
+    right: 15%
+}
+.totalinput {
+    width: 100%;
+    padding: 10px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    position: fixed;
+    right: 15%;
+}
+.firstbutton {
+    background-color: #8EADB7;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 10%; 
+    margin: auto;
+    margin-top: 1em;
+    padding: 8px 0px;
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em; 
+}
+.firstbutton:hover {
+    color: #519e8a;
+    background-color: #fff;
+    border: 2px solid #519e8a;
+}
+.submitoption {
+    clear: both;
+    
+}.changepage {
+    /* width: 50%; */
+    display: inline-block;
+    text-align: center;
+}
+.backbutton {
+    color: #000705;
+    background-color: transparent;
+    border: 2px solid transparent;
+    width: 100%;
+    /* float: left; */
     /* display: inline-block; */
    
-    
-    /* width:100px; */
+}
+.linkcolor {
+    color: #519e8a;
+    /* display: inline-block; */
+
+}
+.linkcolor2 {
+    color: #519e8a;
+    /* display: inline-block; */
+}
+.forwardbutton {
+    color: #000705;
+   /* display: inline-block; */
+    background-color: transparent;
+    border: 2px solid transparent;
+    width: 100%;
+    /* float: right; */
 }

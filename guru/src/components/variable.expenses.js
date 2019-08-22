@@ -50,17 +50,17 @@ export default class VariableExpenses extends Component {
 
     render() {
         return (
-            <div className="wrapper">
-                <div className="form-wrapper">
-                    <h1><strong>Your Variable Expenses</strong></h1>
+            <div className="container">
+                {/* <div className="form-wrapper"> */}
+                    <h1 className="fixedtitle"><strong>Your Variable Expenses</strong></h1>
                     
 
-                    <form>
-                        <div className="form-group">
-                            <label>Groceries: </label>
+                    <form className="fixedform">
+                        <div className="mtginput">
+                            <label className="mortgage">Groceries: </label>
                             <br />
                             <input
-                                className="inputs"
+                                className="rentclass"
                                 value={this.state.groceries}
                                 name="groceries"
                                 onChange={this.handleInputChange}
@@ -68,11 +68,11 @@ export default class VariableExpenses extends Component {
                                 placeholder="Monthly Rent/Mortgage">
                             </input>
                         </div>
-                        <div className="form-group">
-                            <label>Entertainment: </label>
+                        <div className="phoneinput">
+                            <label className="phone">Entertainment: </label>
                             <br />
                             <input
-                                className="inputs"
+                                className="phoneclass"
                                 value={this.state.entertainment}
                                 name="entertainment"
                                 onChange={this.handleInputChange}
@@ -80,11 +80,11 @@ export default class VariableExpenses extends Component {
                                 placeholder="Entertainment">
                             </input>
                         </div>
-                        <div className="form-group">
-                            <label>Clothing: </label>
+                        <div className="carinput">
+                            <label className="car">Clothing: </label>
                             <br />
                             <input
-                                className="inputs"
+                                // className="inputs"
                                 value={this.state.clothing}
                                 name="clothing"
                                 onChange={this.handleInputChange}
@@ -92,11 +92,11 @@ export default class VariableExpenses extends Component {
                                 placeholder="Clothing">
                             </input>
                         </div>
-                        <div className="form-group">
-                            <label>Eat Out: </label>
+                        <div className="cableinput">
+                            <label  className="cable">Eat Out: </label>
                             <br />
                             <input
-                                className="inputs"
+                                // className="inputs"
                                 value={this.state.eatingOut}
                                 name="eatingOut"
                                 onChange={this.handleInputChange}
@@ -104,8 +104,8 @@ export default class VariableExpenses extends Component {
                                 placeholder="Eating out">
                             </input>
                         </div>
-                        <div className="form-group">
-                            <label>Car Repairs: </label>
+                        <div className="rentinput">
+                            <label className="rentinsurance">Car Repairs: </label>
                             <br />
                             <input
                                 className="inputs"
@@ -118,18 +118,20 @@ export default class VariableExpenses extends Component {
                         </div>
                     </form>
                     <br />
-                    <div className="container">
-                        <button onClick={this.mySumFun}>Submit</button>
-                        <label>Your Total Fixed Expenses</label>
-
-                        <h1>{this.state.display}</h1>
-
-
-                    </div>
+                    <div className="totaldisplay">
+                        <label className="">Your Total Variable Expenses</label>
+                        <input classname="totalinput"
+                            value={this.state.displayTotal}
+                            placeholder="Total display">
+                                
+                            </input>
+                        <button onClick={this.mySumFun} className="firstbutton">Submit</button>
+                    
+                            </div>
                     <div>
-                        <button type="submit" className="btn btn-success"><Link to="/debt" className="nav-link">Back to Debt!</Link>  </button>
+                        <button type="submit" className="backbutton"><Link to="/debt" className="nav-link">Back to Debt!</Link>  </button>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
         )
     }
