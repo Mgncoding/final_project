@@ -1,0 +1,19 @@
+{
+  "name": "final_project",
+  "version": "1.0.0",
+  "description": "Finance Guru",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mgncoding/final_project.git"
+  },
+  "author": "Michael, Monica Jassae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mgncoding/final_project/issues"
+  },
+  "homepage": "https://github.com/Mgncoding/final_project#readme"
+}
