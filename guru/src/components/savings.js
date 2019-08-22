@@ -1,5 +1,5 @@
-import React, { Component } from " react";
-import Button from "./button/button"
+import React, { Component } from "react";
+import {Link} from "react-router-dom";
 
 
 
@@ -7,49 +7,63 @@ import Button from "./button/button"
 // You can split up your positive cashflow or bulk it all into one fund.
 
 export default class Savings extends Component {
-    constructor(props) {
-        super(props)
+   
 
-        this.state = {
-            emergency = "",
-            vacation = "",
-            automobile = "",
-            christmas = "",
+        state = {
+            emergency: "",
+            vacation: "",
+            automobile: "",
+            christmas: "",
+            displayTotal: ""
 
         }
         handleInputChange = event => {
             const { name, value } = event.target;
-
             this.setState({
                 [name]: value
             })
-
+    
         }
-        handleFormSubmit = event => {
-            event.preventDefault()
-
+        mySumFunction = () => {
+            var total = 0
+            var myArray = [];
+            myArray.push(this.state.emergency, this.state.vacation, this.state.automobile, this.state.christmas
+            )
+            for (let i = 0; i < myArray.length; i++) {
+                if (parseInt(myArray[i]))
+                    total += parseInt(myArray[i])
+    
+            }
+    
+    
+            this.setState({ displayTotal: total });
+    
             this.setState({
+    
                 emergency: "",
                 vacation: "",
                 automobile: "",
-                christmas: ""
-
-
+                christmas: "",
+                
+               
+    
             })
+    
         }
-    }
+    
     render() {
         return (
-            <div className="wrapper">
-                <div className="form-wrapper">
-                    <h1>A Plan for the Future</h1>
+            <div className="container">
+                {/* <div className="form-wrapper"> */}
+                    <h1 className="fixedtitle">A Plan for the Future</h1>
 
 
-                    <form>
-                        <div className="form-group">
-                            <label> Emergency: </label>
+                    <form className="fixedform">
+                        <div className="mtginput">
+                            <label className="mortgage"> Emergency: </label>
                             <br />
                             <input
+                                className="rentclass"
                                 value={this.state.emergency}
                                 name="emergency"
                                 onChange={this.handleInputChange}
@@ -57,10 +71,11 @@ export default class Savings extends Component {
                                 placeholder="Emergency Fund">
                             </input>
                         </div>
-                        <div className="form-group">
-                            <label> Vacation: </label>
+                        <div  className="phoneinput">
+                            <label className="phone"> Vacation: </label>
                             <br />
                             <input
+                                className="phoneclass"
                                 value={this.state.vacation}
                                 name="vacation"
                                 onChange={this.handleInputChange}
@@ -68,8 +83,8 @@ export default class Savings extends Component {
                                 placeholder="Emergency Fund">
                             </input>
                         </div>
-                        <div className="form-group">
-                            <label> Automobile: </label>
+                        <div className="carinput">
+                            <label className="car"> Automobile: </label>
                             <br />
                             <input
                                 value={this.state.automobile}
@@ -79,8 +94,8 @@ export default class Savings extends Component {
                                 placeholder="A New Car? Maybe repair on current car">
                             </input>
                         </div>
-                        <div className="form-group">
-                            <label> Christmas </label>
+                        <div className="cableinput">
+                            <label className="cable"> Christmas </label>
                             <br />
                             <input
                                 value={this.state.christmas}
@@ -91,11 +106,22 @@ export default class Savings extends Component {
                             </input>
                         </div>
                     </form>
-                    <div className="container">
-                        <button type="submit" className="btn btn-success"><Link to="/profile" className="">Back To Salary!</Link>  </button>
-
+                    <div className="totaldisplay">
+                        <label className="">Your Future Plan</label>
+                        <input classname="totalinput"
+                            value={this.state.displayTotal}
+                            placeholder="Total display">
+                                
+                            </input>
+                        <button onClick={this.mySumFunction} className="firstbutton">Submit</button>
+                    
+                            </div>
+                    <div className="changepage">
+                        <button type="submit" className="backbutton"><Link to="/profile" className="linkcolor">Your Profile!</Link>  </button>
+                        {/* <button type="submit" className="forwardbutton"><Link to="/debt" className="linkcolor2">Input Debt!</Link>  </button> */}
                     </div>
-                </div>
+                    
+                {/* </div> */}
             </div>
         )
     }

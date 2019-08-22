@@ -12,6 +12,7 @@ import FixedExpense from "./components/fixed.expenses";
 import SalaryInput from "./components/salary.input";
 import DebtForm from "./components/debt";
 import DisplayFinal from "./components/final.display.component";
+import Savings from "./components/savings"
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route exact path= "/debt" component={DebtForm} />
             <Route exact path= "/final" component={DisplayFinal} />
             <Route exact path= "/signup" component={Signup} />
+            <Route exact path= "/savings" component={Savings} />
     
      </div> 
 
