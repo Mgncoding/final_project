@@ -6,6 +6,43 @@
 
 
 }
+.container {
+    height: 100v;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #084C61;
+   margin-top: 20px;
+   /* margin-left: 20px; */
+   margin-right: 20px;
+   /* margin-left: 20px; */
+   border-radius: 20px;
+clear: both;
+}
+.mtginput {
+    width: 100%;
+    padding: 10px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    float: left;
+}
+.rentinput {
+    width: 100%;
+    padding: 10px;
+    /* display: flex; 
+    flex-wrap: wrap; */
+    float: left; 
+}
+.cableinput {
+    width: 100%;
+    padding: 10px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    float: left;
+}
+
 
 .mortgage{
     font-size: 18px;
@@ -14,12 +51,16 @@
 
 }
 
-.mtginput{
+/* .mtginput{
     flex: left;
-}
+} */
 
 .phoneinput{
-    flex: left;
+    width: 100%;
+    padding: 10px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    float: left;
 }
 
 .phone{
@@ -33,7 +74,11 @@
     font-family: 'Playfair Display', serif;
 }
 .carinput{
-    flex: left;
+    width: 100%;
+    padding: 10px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    float: left;
 }
 
 .cable{
@@ -56,6 +101,8 @@
 }
 
 .phoneclass{
-    display: inline-block;
-    width:100px;
+    /* display: inline-block; */
+   
+    
+    /* width:100px; */
 }

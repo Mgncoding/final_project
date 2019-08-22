@@ -58,8 +58,9 @@ export default class FixedExpenses extends Component {
     render() {
         return (
 
-            <div className="wrapper">
-                <div className="form-wrapper">
+            <div className="container">
+                {/* <div className="thewrapper"> */}
+                {/* <div className="form-wrapper"> */}
                     <h1 className="fixedtitle"> Your Fixed Expenses</h1>
 
                     <form className="fixedform">
@@ -111,7 +112,7 @@ export default class FixedExpenses extends Component {
                                 placeholder="Cable/Internet">
                             </input>
                         </div>
-                        <div className="form-group">
+                        <div className="rentinput">
                             <label className="rentinsurance">Rent Insurance: </label>
                             <br />
                             <input
@@ -125,18 +126,19 @@ export default class FixedExpenses extends Component {
 
                     </form>
                     <br /><br />
-                    <div className="container">
+                    {/* <div className="container"> */}
                         <button onClick={this.mySumFunction}>Submit</button>
                         <label className="totalfixed">Your Total Fixed Expenses</label>
 
                         <h1>{this.state.displayTotal}</h1>
 
-                    </div>
+                    {/* </div> */}
                     <div>
                         <button type="submit" className="btn btn-success"><Link to="/salary" className="">Back To Salary!</Link>  </button>
                         <button type="submit" className="btn btn-success"><Link to="/debt" className="">Input Debt!</Link>  </button>
                     </div>
-                </div>
+                {/* </div> */}
+                 {/* </div> */}
             </div>
 
         )
