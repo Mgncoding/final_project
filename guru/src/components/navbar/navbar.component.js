@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom"
-import HomePage from "../home/home";
-import LoginForm from "../../login";
+// import { Link } from "react-router-dom"
+// import HomePage from "../home/home";
+// import LoginForm from "../../login";
 import "../navbar/nav.css"
 
 
@@ -46,38 +46,44 @@ export default class Navbar extends Component {
                     <img src={require("../navbar/logo.png")}></img>
                 </h1>
                 <div className="nav-container">
+                    <div className="barnav">
                     <Navbar>
+                        <div className="link1">
                         <NavLink
                             link={"/profile"}
                         >
-                            Link 1
+                           Profile
                         </NavLink>
+                        </div>
+                        <div className="link2">
                         <NavLink
-                            link={designatedUrl}
+                            link={"/login"}
                         >
-                            Link 2
+                            Login
                         </NavLink>
+                        </div>
+                        <div className="link3">
                         <NavLink
-                            skip={this.state.isSkipped}
-                            link={designatedUrl}
+                            // skip={this.state.isSkipped}
+                            link={"/examples"}
                         >
-                            Link 3
+                            Example
                         </NavLink>
+                        </div>
+                        <div className="link4">
                         <NavLink
-                            link={designatedUrl}
+                            link={"/signup"}
                         >
-                            Link 4
+                            Signup
                         </NavLink>
-                        <NavLink
-                            link={designatedUrl}
-                        >
-                            Link 5
-                        </NavLink>
+                        </div>
+                        
                     </Navbar>
-                    <hr/>
-                    <button className="button" onClick={this.toggleSkipped}>
+                    </div>
+                    
+                    {/* <button className="button" onClick={this.toggleSkipped}>
                         Toggle Link 3
-                    </button>
+                    </button> */}
                 </div>
             </div>
         );
