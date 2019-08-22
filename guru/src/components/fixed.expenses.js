@@ -126,16 +126,23 @@ export default class FixedExpenses extends Component {
 
                     </form>
                     <br /><br />
-                    {/* <div className="container"> */}
-                        <button onClick={this.mySumFunction}>Submit</button>
-                        <label className="totalfixed">Your Total Fixed Expenses</label>
-
-                        <h1>{this.state.displayTotal}</h1>
+                    {/* <div className="submitoption"> */}
+                    <div className="totaldisplay">
+                        <label className="">Your Total Fixed Expenses</label>
+                        <input classname="totalinput"
+                            value={this.state.displayTotal}
+                            placeholder="Total display">
+                                
+                            </input>
+                        <button onClick={this.mySumFunction} className="firstbutton">Submit</button>
+                    
+                            </div>
+                        {/* <h1 className="output">{this.state.displayTotal}</h1> */}
 
                     {/* </div> */}
-                    <div>
-                        <button type="submit" className="btn btn-success"><Link to="/salary" className="">Back To Salary!</Link>  </button>
-                        <button type="submit" className="btn btn-success"><Link to="/debt" className="">Input Debt!</Link>  </button>
+                    <div className="changepage">
+                        <button type="submit" className="backbutton"><Link to="/salary" className="linkcolor">Back To Salary!</Link>  </button>
+                        <button type="submit" className="forwardbutton"><Link to="/debt" className="linkcolor2">Input Debt!</Link>  </button>
                     </div>
                 {/* </div> */}
                  {/* </div> */}
