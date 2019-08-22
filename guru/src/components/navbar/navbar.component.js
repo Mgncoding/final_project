@@ -52,14 +52,14 @@ export default class Navbar extends Component {
                         <NavLink
                             link={"/profile"}
                         >
-                           Profile
+                           <p className="barlinks">Profile </p>
                         </NavLink>
                         </div>
                         <div className="link2">
                         <NavLink
                             link={"/login"}
                         >
-                            Login
+                          <p className="barlinks">Login |</p>
                         </NavLink>
                         </div>
                         <div className="link3">
@@ -67,14 +67,14 @@ export default class Navbar extends Component {
                             // skip={this.state.isSkipped}
                             link={"/examples"}
                         >
-                            Example
+                            <p className="barlinks">Example | </p> 
                         </NavLink>
                         </div>
                         <div className="link4">
                         <NavLink
                             link={"/signup"}
                         >
-                            Signup
+                            <p className="barlinks">Signup |</p> 
                         </NavLink>
                         </div>
                         
