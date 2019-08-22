@@ -42,10 +42,11 @@ export default class SalaryInput extends Component {
     render() {
         return (
             <div className="container">
+                <div className="col-md-4">
                 <h1 className="fixedtitle"> Input Your Salary Information</h1>
                 <form className="fixedform">
                     <div className="mtginput">
-                    <label className="mortgage">Hours Worked</label>
+                    <label className="mortgage">Total Income</label>
                     <br/>
                     <input
                         className="rentclass"
@@ -59,6 +60,7 @@ export default class SalaryInput extends Component {
                     
                    
                 </form>
+                </div>
                 <div className="totaldisplay">
                         <label className="">Monthly Salary</label>
                         <input classname="totalinput"

@@ -63,12 +63,12 @@ export default class Navbar extends Component {
                         </NavLink>
                         </div>
                         <div className="link3">
-                        <NavLink
+                        {/* <NavLink
                             // skip={this.state.isSkipped}
                             link={"/examples"}
                         >
                             <p className="barlinks">Example | </p> 
-                        </NavLink>
+                        </NavLink> */}
                         </div>
                         <div className="link4">
                         <NavLink

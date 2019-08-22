@@ -144,7 +144,6 @@ export default class FixedExpenses extends Component {
                         <button type="submit" className="backbutton"><Link to="/salary" className="linkcolor">Back To Salary!</Link>  </button>
                         
                     </div>
-                        <button type="submit" className="forwardbutton"><Link to="/debt" className="linkcolor2">Input Debt!</Link>  </button>
                 {/* </div> */}
                  {/* </div> */}
             </div>

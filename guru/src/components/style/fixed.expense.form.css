@@ -1,6 +1,6 @@
 .fixedtitle{
     font-size: 25px;
-    color: #167394;
+    color: #4cc7f3;
     font-family: 'Playfair Display', serif;
     text-shadow: 2px 2px 4px grey
 
@@ -95,7 +95,7 @@
 
 .totalfixed{
     font-size: 18px;
-    color: #167394;
+    color: #51b9df;
     font-family: 'Playfair Display', serif;
 
 }
@@ -105,11 +105,11 @@
 }
 .totaldisplay {
     font-size: 18px;
-    color: #167394;
+    color: #6fd0f3;
     font-family: 'Playfair Display', serif;
     position: fixed;
     /* clear: both;s */
-    right: 15%
+    right: 10%
 }
 .totalinput {
     width: 100%;
@@ -117,7 +117,7 @@
     /* display: flex; */
     /* flex-wrap: wrap; */
     position: fixed;
-    right: 20%;
+    right: 30%;
 }
 .firstbutton {
     background-color: #8EADB7;
@@ -153,17 +153,21 @@
     background-color: transparent;
     border: 2px solid transparent;
     width: 100%;
-    /* float: left; */
-    display: inline-block;
+    /* position: fixed; */
+    left: 20%;
+    float: right;
    
 }
 .linkcolor {
-    color: #519e8a;
+    color: black;
+    font-weight: bold;
+    right: 50%;
     /* display: inline-block; */
 
 }
 .linkcolor2 {
-    color: #519e8a;
+    color: black;
+    font-weight: bold;
     /* display: inline-block; */
 }
 .forwardbutton {

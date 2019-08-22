@@ -57,8 +57,9 @@ export default class DisplayFinal extends Component {
                             <label className="mortgage">Total Salary: </label>
                             <br />
                             <input
+                            
                                 className="rentclass"
-                                value={this.state.salary}
+                                value={this.state.salary} 
                                 name="salary"
                                 onChange={this.handleInputChange}
                                 type="number"
